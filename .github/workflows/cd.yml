@@ -21,6 +21,10 @@ name: CD
 # 비유: 공장 품질검사(CI) → 창고 입고(Registry) → 보안 검수(Container Scan)
 #       → 현장 시험 운행(E2E) → 공개 출하(Pages)
 # ─────────────────────────────────────────────────────────
+permissions:
+  contents: read
+  packages: write
+  
 on:
   workflow_run:
     workflows: ["CI"]
